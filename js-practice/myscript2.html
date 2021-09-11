@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myjs</title>
+
+    <script>
+
+        //Arrays
+    //Accessing Arrays    0      1       2
+        let students = ["Sam", "Joe", "Kofi", 7, 10]
+        console.log(students[2]);
+
+        for (let i = 0; i < students.length; i++) {
+            document.write(students[i])
+        }
+
+        //switch
+        let cooked = "rice"
+        switch(cooked){
+            case "ice":
+                console.log("ans1")
+                break;
+            case "mice":
+                console.log("ans2")
+                break;
+            case "rce":
+                console.log("ans3") 
+                break;
+            default: console.log("eat " + cooked);
+        }
+
+        let total = 2.5
+        switch(total){
+            case 2:
+                console.log("1")
+                break;
+            case 2.5:
+                console.log("2")
+                break;
+            default:
+                console.log("3")
+        }
+        let sum = 100
+        console.log(sum);
+
+        // sum = sum + 1
+        sum++
+        console.log(sum);
+
+        // sum = sum - 1
+        sum--
+        console.log(sum);
+
+        // sum = sum + 100
+        sum+=100
+        console.log(sum);
+        console.log(++sum)
+
+        //boolean
+        //true = 1 && false = 0
+        console.log(true + false + true)
+        console.log(true > false)
+        console.log('' == false)
+//for loop
+        for(let num = 0; num <= 50; num = num + 2) {
+            console.log(num);
+        }
+//while loop
+        // let sister = 22
+        // while(sister) {
+        //     console.log("my sister")
+        //     sister > 23
+
+        // }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

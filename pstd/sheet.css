@@ -1,0 +1,38 @@
+/*
+
+body {
+	background-color:# 
+	font-family: Arial;
+}
+
+.container {
+	width: 1000px;
+	height: 150px;
+	border: solid thin;
+	margin: 0px auto;
+	
+}
+
+#box-1 {
+	width: 150px;
+	height: 150px;
+	border: solid thin;
+	float: left;
+	
+}
+
+#box-2 {
+	width: 850px;
+	height: 150px;
+	border: solid thin;
+	margin-left: 150px;
+}*/
+tr:hover {
+	background-color: yellow;
+	text-decoration: line-through;
+}
+
+body{
+	background-color: red;
+
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    #container {
+        height: 50vh;
+        width: 50%;
+        /* background-color: blue; */
+    }
+
+
+
+</style>
+
+<body>
+
+    <div id="container"></div>
+    
+    <button id="button">Click me</button>
+
+
+<script>
+    //colors array
+    let colors = ['blue', 'yellow', 'black', 'red', 'brown', 'orange']
+
+    //get button
+    let button = document.getElementById('button');
+
+    //add event listener
+    button.addEventListener('click', function () {
+
+        //randomizer
+        let randomColor = colors[Math.floor(Math.random() * colors.length)]
+
+        //get container
+        let container = document.getElementById("container");
+
+        container.style.background = randomColor;
+    });
+
+   
+
+</script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nav bar with logo</title>
+	<style>
+		/*body{
+			margin: 0;
+			padding:0;
+			background:gray;
+
+		}
+
+		nav{
+			width: 100%;
+			background:black;
+			overflow: auto;
+
+		}
+
+		ul{
+			padding:0;
+			margin:0 0 0 150px;
+			list-style:none;
+		}
+
+		li{
+			float: left;
+		}
+
+		.logo img{
+			position: absolute;
+			margin-top:15px;
+			margin-left:10px; 
+
+		nav a {
+			width: 100px;
+			display: block;
+			padding: 20px 15px;
+			text-decoration: none;
+			font-family: Arial;
+			color:#f2f2f2;
+			text-align: center;
+		}	
+
+		nav a:hover {
+			background:purple;
+			transition: 0.5s;
+			text-transform: uppercase;
+		}*/
+	</style>
+</head>
+
+<style type="text/css">
+		
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+		}
+
+
+		.logo img {
+			margin-top: 20px;
+			float: left;
+		}
+		.navbg {
+			/*border: solid thin;*/
+			/*border-radius: 20px;*/
+			height: 150px;
+			padding-right: 10px;
+			background: #00b7ff;
+
+		}
+
+		
+		.navbar {
+			width: 85%;
+			margin: auto;
+			padding: 35px 0px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+		}
+
+		.navbar ul li {
+			list-style: none;
+			display: inline-block;
+			margin: 0 20px;
+			position: relative;
+		}
+
+		.navbar ul li a {
+			text-decoration: none;
+			color: black;
+			text-transform: uppercase;
+		}
+		/*Thsi for the transition*/
+		.navbar ul li::after {
+			content: '';
+			height: 3px;
+			width: 0%;
+			background: white;
+			position: absolute;
+			left: 0;
+			bottom: -10px;
+			transition: 0.2s;
+		}
+
+		.navbar ul li:hover::after {
+			width: 100%;
+		}		
+		/*it ends here*/
+
+		#search {
+			float: right;
+		}
+
+		#search1 {
+			width: 100px;
+			text-align: center;
+			border-radius: 25px;
+			font-weight: bold;
+			border: 2px solid white;
+			cursor: pointer;
+			position: relative;
+			overflow: hidden; 
+			background: transparent;
+		}
+
+
+		/*this is for the search btn animation*/
+		.search2 span {
+			background: #fff;
+			height: 100%;
+			width: 0px;
+			border-radius: 25px;
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+			z-index: 1;
+			transition: 0.5s;
+		}
+
+		.search2 button:hover span{
+			width: 70%;
+		}
+
+		.search2 button:hover {
+			border: none; 
+		}
+		/*it ends here*/
+
+
+		.container {
+			margin: 20px auto ;
+			border: solid thin;
+			/*border-radius: 20px;*/
+			width: 100%;
+			height: 100vh;
+			background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(../IMAGE/backg.jpg);
+			background-size: cover;
+			background-position: center;
+		}
+
+		.box-1 {
+			float: right;
+			padding-top: 20px;
+			padding-right: 10px;
+		}
+
+		
+
+	</style>
+
+<body>
+	<div class="navbg">
+		<!-- This is for the logo -->
+		<div class="logo">
+			<a href="#">
+				<img src="../IMAGE/logo.png">
+			</a>
+		</div>
+		<!-- It ends here -->
+
+
+		<!-- this is for the navbar -->
+		<div class="navbar">
+			<nav>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Music</a></li>
+					<li><a href="#">Download</a></li>
+					<li><a href="#">Event</a></li>
+					<li><a href="#">Products</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">contact</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- it ends here -->	
+		<div class="search2">
+			<form id="search">
+				<button type="search" id="search1"> <span></span> Search</button>
+				<input type="search" name="search">
+			</form>
+		</div>
+	</div>	
+
+	<div class="container">
+
+
+			<div class="box-1">
+				<a href="#"><button id="btnsrch"><em></em> Login/Register</button> </a>
+			</div>
+		
+	</div>
+</body>
+</html>

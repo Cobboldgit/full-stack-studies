@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>watch</title>
+
+    <style>
+        #cad4 {
+            content:'';
+        }
+    </style>
+</head>
+<body>
+
+    <h1></h1>
+    <h2></h2>
+
+    <input type="text">
+    <button onclick="submit()">click me!</button>
+    <div id="cad1"></div>
+    <div id="cad2"></div>
+    <div id="cad3"></div>
+    <div id="cad4"></div>
+<script>
+
+    setInterval(showTime, 1000)
+    
+    function showTime() {
+        let day = new Date();
+        let hour = day.getHours();
+        let minute = day.getMinutes();
+        let seconds = day.getSeconds();
+        let am_pm = 'am';
+
+        if (hour > 12) {
+            hour -= 12
+            am_pm = 'Pm'
+        }
+
+        if (hour == 0) {
+            hour = 12
+            am_pm = 'Am'
+        }
+        hour = hour < 10 ? `0${hour}` : hour
+        minute = minute < 10 ? `0${minute}` : minute;
+        seconds = seconds < 10 ? `0${seconds}` : seconds; 
+
+        let currentTime = `${hour} : ${minute} : ${seconds} ${am_pm}`
+
+        document.querySelector('h1').innerHTML = currentTime
+
+    }
+    
+    showTime()
+
+    // let h2 = document.querySelector('h2');
+    // let user = 'user name';
+    // let error = 'This is not a name'
+
+
+    // function myNameIs(name) {
+
+    //     if (name === '' || null || 0) {
+    //         h2.innerHTML = `Please ${user} enter name to continue `
+    //     }else if (name === user) {
+    //         h2.innerHTML = `Kindly enter your ${user} to procede`
+    //     }else {
+    //         h2.innerHTML = `Welcome ${name}`
+    //     }
+        
+        
+        
+    // }
+
+    // let input = prompt(`Enter your name to continue :`, user)
+     
+    // myNameIs(input)
+
+
+
+    function candidateName() {
+        let input = document.getElementsByTagName('input');
+        let result =[];
+        
+        for (let i = 0; i < input.length; ++i) {
+             result[i] = input[i].value;
+
+             if (input[i].value == '' || null || 0) {
+                alert('You need to fill inputs.')
+            }
+        };
+
+        
+        
+       document.getElementById("cad1").innerHTML = result[0]
+       document.getElementById("cad2").innerHTML = result[1]
+       document.getElementById("cad3").innerHTML = result[2]
+       document.getElementById("cad4").innerHTML = result[2]
+    };
+
+    candidateName()
+
+  
+
+   
+</script> 
+</body>
+</html>

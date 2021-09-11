@@ -1,0 +1,62 @@
+.my-nav {
+    background-color: #a54d4d !important;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.my-nav .navbar-brand {
+    color: rgb(255 255 255 / 90%);
+}
+
+.my-nav .navbar-nav > li > a {
+    color: #fff;
+}
+
+.carousel-edit {
+    height: 550px;
+}
+
+.container-edit{
+    margin-top: 5rem ;
+}
+
+.footer {
+    background-color: #a54d4d;
+    color: white;
+    padding: 3rem 3rem;
+
+}
+
+.footer-link  ul li{
+    list-style: none;
+    font-size: 15px;
+}
+
+.footer-link a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-link a:hover {
+    color: rgb(182, 125, 125);
+}
+
+.button-color {
+    background-color: #382525;
+    border-color: #382525;
+}
+
+.btn-lg, .btn-group-lg > .btn {
+    margin-top: 7px;
+    font-size: 10px;
+}
+
+.form-body {
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(146, 63, 63));
+}
+
+.form-edit {
+    display: flex;
+    flex-direction: column;
+}

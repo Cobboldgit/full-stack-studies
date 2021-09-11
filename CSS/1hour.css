@@ -1,0 +1,48 @@
+body {
+	
+	
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+}
+
+a {
+	text-decoration: none;
+
+}
+
+a:hover {
+	color: red;
+}
+
+a:active {
+	color: yellow;
+}
+
+/*a:visited {
+	color: black;
+}*/
+
+.categories {
+	border: 1px #ccc solid;
+	padding: 10px;
+	border-radius: 15px;
+	
+}
+
+.categories h2 {
+	text-align: center;
+}
+
+.catergories ul {
+	padding: 0;
+	
+	list-style: none;
+}
+
+.catergories li {
+	padding-bottom: 8px;
+	border-bottom: dotted 1px #333;
+}

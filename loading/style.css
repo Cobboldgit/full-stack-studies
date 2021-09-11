@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    
+    height: 100vh;
+    background: radial-gradient( rgb(13, 255, 0),rgb(0, 208, 255));
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 750px;
+    height: 200px;
+    /* border: solid; */
+}
+
+.load-bg {
+    overflow: hidden;
+    width: 650px;
+    height: 50px;
+    background: linear-gradient(rgba(255, 255, 255, 0.469),rgba(255, 255, 255, 0.469));
+    border-radius: 100px;
+}
+
+.load {
+    
+    --width: 10%;
+    width: var(--width);
+    height: 50px;
+    background: linear-gradient(rgb(0, 187, 255),rgb(0, 184, 213));
+    border-radius: 100px;
+    /* transition: ease-in-out; */
+    text-align: center;
+    line-height: 50px;
+    color: rgb(203, 255, 249);
+}

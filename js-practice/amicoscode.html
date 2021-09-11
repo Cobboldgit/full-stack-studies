@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn js</title>
+</head>
+<body>
+
+    <script>
+
+
+        //variables
+      /*  let name = "Maria Jones";
+        let age = 21;
+        let hasDriverLicence = true; 
+
+        console.log(name + " type = " + typeof name );
+        console.log(age + " type = " + typeof age);
+        console.log(hasDriverLicence + " type = " + typeof hasDriverLicence);
+         */
+        
+        //objects
+        var person = {
+            name: "Maria Jones",
+            age: 21,
+            hasDriverLicence: true,
+            DateOfBirth: "01/01/2000",
+            address: {
+                firstLine: "123",
+                postCode: "SE1",
+                country: "England"
+            }
+        };
+        
+        console.log(person);
+
+        console.log(JSON.stringify(person));
+        console.log(JSON.stringify(person.address)); //printing objects in object
+        
+        console.log(person.name);
+        console.log(person.age);
+        console.log(person.hasDriverLicence);
+        console.log(person.address.firstLine); //printing objects in object
+        console.log(person.address.postCode); //printing objects in object
+        console.log(person.address.country); //printing objects in object
+
+        console.log(Object.values(person))
+        console.log(Object.values(person.address)); //printing objects in object
+
+        //Arrays
+        let my_class = ["Alex", "Maria", "Sam"];
+        console.log(my_class);
+
+        console.log(my_class[0]);
+
+        console.log(my_class.length);
+
+        //loop through an array
+        for(let n of my_class) {
+            console.log(n);
+        }
+
+        //alternative
+       my_class.forEach(function(n, index) {
+           console.log(index + "-" + n);
+       }
+       );
+
+        //Arithemetic operations
+       let addition = 2 + 2;
+       let substration = 3 - 90;
+       let division = 3 * 30;
+       let remainder = 5 % 2;
+
+       console.log(addition);
+       console.log(substration);
+       console.log(division);
+       console.log(remainder);
+
+       //functions
+
+       function addNumbers(n1, n2){
+        //start of funciton body
+        //define logic
+        let result = n1 + n2;
+        return result;
+        //end of function body
+       }
+
+       let result = addNumbers(10, 20);
+       console.log(result);
+
+       //loops 
+    //    for (let i = 0; i <= 5; i++) {
+    //        console.log(i);
+    //    }
+
+       //loop for array 2
+    //    let studentID = [
+    //        { id: "Alexandra", agex: 22 },
+    //        { id: "Mariama", agex: 30 }
+    //    ];
+
+    //    for (let i = 0; i <= studentID.length; i++) {
+    //        console.log(studentID[i].id);
+    //        console.log(studentID[i].agex);
+    //        console.log("--------------");
+    //    }
+
+       //while loop
+       let num = 0
+       while (num < 10) {
+            console.log(num);
+            num += 4 //num = num + 1 or num++
+       }
+
+       //do while
+       let num1 = 0
+       do {
+            num1++
+            console.log(num1);
+       } while(num1 >  5);
+
+       //break and continue
+         let num2 = 0;
+         while (num2 < 10) {
+            num2++;
+            
+            if (num2 == 5){
+                break;
+            }
+            console.log("-----------");
+
+            console.log(num2);
+            
+         }
+
+         let num3 = 0;
+         while (num3 < 10) {
+            num3++;
+            console.log("-----------");
+            if (num3 < 6){
+                continue;
+            }
+
+            console.log(num3);
+            
+         }
+
+         //switch
+
+         switch (new Date().getDay()) {
+             case 0:
+                 console.log("sunday")
+                 break;
+         
+             default:
+                console.log(new Date())
+         }
+
+         let myID = {
+             name: "Augustine",
+             age: 18
+         }
+
+         switch (true) {
+            case (myID.age == 17):
+                console.log(myID.name + " is almost an adult");
+                break;
+            case (myID.age >= 18):
+                console.log(myID.name + " is an adult.");
+                break;
+            default:
+                 console.log(myID.name + " is not an adult");;
+         }
+
+         //map
+         let map = [1, 2, 3, 4, 5].map(function(n) {
+             return n * 2;
+         });
+
+         console.log(map);
+
+         //filter
+         let filter = [1, 2, 3, 4, 5, 10, 29, 100].filter(function(n) {
+             return n % 2 == 0;
+         });
+
+         console.log(filter);
+
+         //reduce
+         let reduce = [1, 2, 3, 4, 5].reduce(function(accumulator, current) {
+             return accumulator + current;
+         });
+
+         console.log(reduce);
+         
+         //callbacks
+         function callbackExample(name, callback) {
+             console.log(callback(name));
+         }
+         
+
+        //  let name = "Augustine Cobbold"
+
+        //  let callback = function(name) {
+        //      return "hola " + name;
+        //  }
+
+        //  callbackExample(name, callback);
+
+                    //or
+
+        callbackExample("Augustine Cobbold", function(name) {
+            return "hola " + name;
+        });
+
+        //my calulator
+
+        console.log("----calcutor-----".toUpperCase());
+
+        let add = function(n1, n2) {
+            return n1 + n2
+        }
+        let substrate = function(n1, n2) {
+            return n1 - n2
+        }
+        let divide = function(n1, n2) {
+            return n1 / n2
+        }
+        let multiply = function(n1, n2) {
+            return n1 * n2
+        }
+        let rem_of = function(n1, n2) {
+            return n1 % n2
+        }
+        //arrow function
+        let square = (a1) => {
+            return a1  * a1;
+        }
+
+        
+       
+        console.log(`-- ${add(2, 3)}`);
+        console.log("-- " + substrate(10, 5));
+        console.log("-- " + divide(10, 5));
+        console.log("-- " + multiply(10, 5));
+        console.log("-- " + rem_of(10, 2));
+        console.log("-- " + square(10));
+
+        const LaptopName = "Hp Elitebook"
+        const color = "black"
+        const Hdd = "1tb"
+
+        console.log("Name " + LaptopName + " Color " + color + " Hdd " + Hdd); 
+        console.log(`Name: ${LaptopName} Color: ${color} Hdd: ${Hdd} `);
+        
+
+        //spread operator with array
+        const arryOne = [ 'Marian', 'Anna', 'Alex']
+        const arryTwo = [ 'Kofi', 'Loki', 'Kwame']
+
+        const concatArray = [...arryOne, ...arryTwo]
+
+        concatArray.forEach(function (arrayname) {
+            console.log(arrayname);
+        });
+
+        const TrainingDay = ['Day 1', 'Day 2', 'Day 3']
+        const Activity = ['Run', 'Jump', 'dance']
+
+        const ArrayCombo = [...TrainingDay,...Activity]
+
+        ArrayCombo.forEach(function (exercise) {
+            console.log(exercise);
+        });
+
+        //spread operator with srings
+        const gym1 = 'pressup'
+        const gym2 = 'legsup'
+
+        const addgym = [...gym1, ...gym2]
+
+        addgym.forEach(function (totalgym) {
+            console.log(totalgym)
+        });
+
+        //another example corresponding to the one at the top
+        const jessylable = function (jn1, jn2, jn3) {
+            return jn1 + jn2 + jn3;
+        }
+
+        const jessyNumber = [1, 5, 6]
+
+        const jessyCombo = jessylable(...jessyNumber);
+        console.log(jessyCombo);
+       
+        /*const jessyCombo = jessylable(jessyNumber[0] ,jessyNumber[1], jessyNumber[2]) ;
+        console.log(jessyCombo);*/ //this is a very bad code
+
+        //spread operator with objects
+         const detail1 = {
+            city: 'Accra',
+            country: 'Ghana',
+            postCode: 'LA44'
+         };
+
+         const detail2 = {
+            firstname: 'Augustine',
+            Lastname: 'Cobbold'
+         };
+
+         const me = {...detail1,...detail2}
+         console.log(JSON.stringify(me, null, 2));
+
+         //Arrow functions
+         const hello = () => {
+             const es6 = 'ES6';
+             return `hello ${es6}`
+         }
+
+         /* arrowadd = (f9, e8) => {
+         return f9 + e8;
+         }*/ //or
+
+         const arrowadd = (f9, e8) => f9 + e8; 
+         
+         
+         console.log(hello());
+         console.log(arrowadd(15, 40));
+
+         //lexical this
+          const billion= {
+            name: "Augustine",
+            cars: ["Lambo", "Alpha romio"],
+            house: "Five bedroom apartment",
+            toString: function () {
+                // console.log(`${this.name} has ${this.car1} and ${this.car2} and a ${this.house} `);
+               
+                // const that = this;
+                // this.cars.forEach(function (car) {
+                //     console.log(`${that.name} has ${car} `);
+                // })
+
+                this.cars.forEach( car => {
+                    console.log(`${this.name} has ${car}`);
+                });
+            }
+          }
+
+          billion.toString();
+
+
+          // Enhanced Object Properties
+          const calculator = brand => {
+              return {
+                  brand,
+                  plus: function(q1, q2) {
+                      return q1 + q2;
+                  }
+              }
+          }
+
+          const calcus = calculator('casio');
+
+          console.log(calcus.brand);
+          console.log(calcus.plus(10, 20));
+          
+          //Array detructuring
+
+          const anna = ['Anna', 25, "5.5ft", "degree"]
+
+          const hername = anna[0];
+          const herage = anna[1];
+          const herheight = anna[2];
+          const hercert = anna[3];
+
+          console.log(`${hername} ${herage} ${herheight} ${hercert} `);
+
+
+          //object destructuring
+          //------code here ------//
+          
+
+          //Function default parameters 
+
+          const calculatePay = (yearSalary = 0, bonus = 0) => yearSalary + bonus
+
+          const outcomeSalary = calculatePay(22000)
+          console.log(outcomeSalary)
+
+          const calculatePay2 = (yearSalary2, bonus2 = {
+              teamBonus: 0,
+              employeeBonus: 0
+          }) => {
+               return yearSalary2 + bonus2.teamBonus + bonus2.employeeBonus;
+          }
+         
+          const outcomeSalary2= calculatePay2(22000, {teamBonus: 10, employeeBonus: 10})
+          
+          console.log(outcomeSalary2);
+
+         //classes
+
+         //lets create a class that models an animal
+
+        class Animal {
+            constructor(Aname, Aage) {
+                console.log(`${Aname} is an animal and was created`);
+                this.Aname = Aname;
+                this.Aage = Aage;
+            }
+
+            eat() {
+                console.log(`${this.Aname} is eating`);
+            }
+
+            sleep() {
+                console.log( `${this.Aname} is sleeping` );
+            }
+
+            wakeUp() {
+                console.log(`${this.Aname} is waking up`);
+            }
+
+            logAge() {
+                console.log(`${this.Aname} is ${this.Aage} years old `);
+            }
+        }
+
+        const bobby = new Animal("bobby", 2)
+        bobby.eat()
+        bobby.sleep()
+        bobby.wakeUp()
+        bobby.logAge()
+
+        console.log("----------");
+        
+        const peace = new Animal("peace", 3)
+        peace.eat()
+        peace.sleep()
+        peace.wakeUp()
+        peace.logAge()
+
+        //classes inheritance 
+        class dog extends Animal {
+            constructor(Aname, Aage, breed) {
+                super(Aname, Aage)
+                this.breed = breed;
+            }
+
+            logbreed() {
+                console.log(`${this.Aname} is a ${this.breed} `);
+            }
+
+            logAgeFromDog() {
+                console.log(`${this.Aname} is ${this.Aage} years old`);
+            }
+        }
+
+        const mike = new dog("mike", 5, "bulldog")
+        mike.logbreed();
+        mike.logAgeFromDog();
+
+        class dogs extends Animal{
+            constructor(Aname, Aage, color1) {
+                super(Aname, Aage);
+                this.color1 = color1;
+            }
+
+            logcolor() {
+                console.log(`${this.Aname} is ${this.color1} `);
+            }
+        }
+
+        const pjay = new dogs("pjay", 10, "black")
+        pjay.logcolor()
+        pjay.logAge()
+        pjay.wakeUp()
+
+        class cat extends Animal {
+
+        }
+
+        console.log(" ")
+        const pussy = new cat("pussy", 2)
+        pussy.eat()
+        pussy.logAge()
+
+       
+        //promise
+
+        // Promise
+
+     const promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Data is back from the server")
+        }, 3000);
+
+        setTimeout(() => {
+            reject("No data is back from the sever, there was an error")
+        }, 2000);
+
+     });
+
+     promise.then(response => {
+         console.log(respone);
+     }).catch(error => {
+         console.log(error);
+     })
+        
+     
+     //promise.all
+
+    
+     const namesPromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(["Anna", "Anthony", "Mike"]);
+        }, 3000);
+
+        setTimeout(() => {
+            reject("No data back from the server, there is an error")
+        }, 5000);
+     });
+
+     const namesPromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(["Anna", "Anthony", "Mike"]);
+        }, 3000);
+
+        setTimeout(() => {
+            reject("No data back from the server, there is an error")
+        }, 5000);
+    });
+        
+    </script>
+</body>
+</html>

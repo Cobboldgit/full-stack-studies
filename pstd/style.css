@@ -1,0 +1,31 @@
+/*This is just for studies*/
+h1{
+	color:orange;
+	text-align: center;
+}
+/*P is a selector,it also refers to all text starting a code*/
+p {
+	font-size: 130%;
+}
+
+/* selecting by id*/
+
+#intro {
+	background-color: yellow;
+}
+
+/* selecting by class*/
+
+.first {
+	font-size:200%;
+}
+
+/*This a decending selector*/ 
+
+#intro .first{
+	color: red;
+}
+
+#intro em {
+	color: green;
+}
